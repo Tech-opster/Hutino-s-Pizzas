@@ -1,0 +1,776 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,500&display=swap');
+* {
+    font-family: 'Roboto Slab', serif;
+}
+
+body {
+    margin: 0px;
+    background-image: url(../../Mídia/Imagens/pizzawall2.jpg);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+.back {
+    width: 80%;
+    background-color: #f5f5f5;
+}
+
+.option {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 10px 0px;
+    font-size: 18px;
+    gap: 5px;
+    margin-bottom: 45px;
+}
+
+.help, .login {
+    text-decoration: none;
+    color: black;
+}
+
+.help div, .login div {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+.login {
+    margin-right: 20px;
+}
+
+.menuOpener {
+    display: none;
+    margin-right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.option a div img {
+    width: 100%;
+    max-width: 30px;
+}
+
+.option a:hover div {
+    background-color: rgba(0, 132, 255, 0.7);
+    border-radius: 15px;
+}
+
+.gradientTop, .gradientBottom {
+    height: 100px;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    background-image: linear-gradient(45deg, rgba(255, 68, 0, 0.850) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255, 68, 0, 0.850) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255, 68, 0, 0.850) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(255, 68, 0, 0.850) 75%);
+    background-size: 40px 40px;
+    background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+    background-color: transparent;
+}
+
+.logoimg {
+    width: 100%;
+    max-width: 220px;
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.5))
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 65px;
+    font-family: 'Rubik', sans-serif;
+    color: rgb(0, 132, 255);
+    text-shadow: 4px 4px 2px rgb(0, 0, 0);
+    text-align: center;
+    margin: 0px;
+}
+
+.logo span {
+    color: red;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.pizzaCardInfo {
+    display: none;
+}
+
+.pizzaCard {
+    max-width: 250px;
+    margin: 0px 50px 50px 50px;
+}
+
+.pizzaCard a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.image {
+    position: relative;
+}
+
+.image img {
+    width: 100%;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+
+.pizzaCard a:hover .image img {
+    filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5));
+}
+
+.mais {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(0, 132, 255);
+    z-index: 99;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.pizzaCard a:hover .mais {
+    background-color: rgb(0, 88, 170);
+    padding: 2.5px;
+    bottom: -17.5px;
+}
+
+.mais::before {
+    content: "+";
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text p {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.text h1 {
+    margin: 0px;
+}
+
+.descPizza {
+    text-align: center;
+    word-wrap: break-word;
+    margin-top: 20px;
+}
+
+.gradientBottom {
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.footer {
+    margin: 0px;
+    background-color: rgba(255, 68, 0, 0.850);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+}
+
+.footer h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+}
+
+.service p {
+    margin-top: 0px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around
+}
+
+.icons a {
+    margin: 0px;
+}
+
+.icons img {
+    max-width: 30px;
+}
+
+#face:hover {
+    background-color: rgb(0, 102, 255);
+    border-radius: 5px;
+}
+
+#insta:hover {
+    background-image: linear-gradient(45deg, blue, purple, orange, yellow);
+    border-radius: 8.6px;
+}
+
+#whats:hover {
+    background-color: rgb(0, 255, 0);
+    clip-path: circle(47%);
+}
+
+.icons2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.icons2 h1 {
+    margin-bottom: 5px;
+}
+
+.icons2 a {
+    margin: 0px;
+    line-height: 0px;
+}
+
+.icons2 img {
+    width: 100%;
+    max-width: 150px;
+}
+
+.safe {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+}
+
+.safe h1:last-of-type {
+    margin-bottom: 0px;
+}
+
+.safe img {
+    max-width: 100%;
+}
+
+.payment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+.payment img {
+    width: 100%;
+}
+
+aside {
+    min-width: 0px;
+    transition: all ease 0.2s;
+}
+
+.aside {
+    height: 100%;
+    width: 0px;
+    background-color: rgba(155, 207, 255, 0.95);
+    display: flex;
+    flex-direction: column;
+    transition: all ease 0.2s;
+    overflow-y: auto;
+    position: absolute;
+    right:0;
+}
+
+.asideShow {
+    min-width: 370px;
+}
+
+.asideShow2 {
+    width: 370px;
+}
+
+.titleCar h1 {
+    font-size: 40px;
+    margin: 30px 0px 10px 20px;
+    font-family: 'Rubik', sans-serif;
+    color: rgb(0, 132, 255);
+    text-shadow: 2px 2px 1px rgb(0, 0, 0);
+}
+
+.menuCloser {
+    display: none;
+    cursor: pointer;
+}
+
+.carrinho {
+    display: flex;
+    align-items: center;
+    margin: 30px 25px 0px 25px;
+}
+
+.imgCar {
+    flex: 1;
+}
+
+.imgCar img {
+    width: 50px;
+}
+
+.pizzaCar {
+    flex: 1;
+    font-size: 20px;
+}
+
+.qt {
+    display: flex;
+    justify-content: end;
+    flex: 2;
+}
+
+.qtAll {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70px;
+    height: 35px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.ingreCar {
+    margin-left: 20px;
+}
+
+.rem, .add span {
+    font-size: 14px;
+}
+
+.aside hr {
+    border: 1px solid rgba(0, 132, 255, 0.6);
+    width: 90%;
+}
+
+.fullPrice {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+}
+
+.fullPrice h2 {
+    font-size: 35px;
+    font-family: 'Rubik', sans-serif;
+    color: rgb(0, 132, 255);
+    text-shadow: 2px 2px 1px rgb(0, 0, 0);
+    margin: 25px 20px;
+}
+
+.fullPrice span {
+    font-size: 25px;
+    padding-top: 9px;
+}
+
+.finish {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.finish button {
+    width: 300px;
+    height: 60px;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    background-color: rgb(52, 255, 52);
+    border: none;
+    border-radius: 15px;
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    background-color: rgba(255, 255, 255, 0.6);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all ease 0.3s;
+    z-index: 999;
+}
+
+.modalBody {
+    position: relative;
+    width: 900px;
+    background-color: #f5f5f5;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.gradientModalTop, .gradientModalBottom {
+    position: absolute;
+    width: 900px;
+    min-height: 20px;
+    background-image: linear-gradient(45deg, rgba(255, 68, 0, 0.850) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255, 68, 0, 0.850) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255, 68, 0, 0.850) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(255, 68, 0, 0.850) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    background-color: transparent;
+    z-index: -1;
+}
+
+.gradientModalTop {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.gradientModalBottom {
+    bottom: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.pizzaBig {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+.pizzaBig img {
+    width: 350px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5))
+}
+
+.pizzaBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    padding: 30px 0px;
+}
+
+.titleModal h1 {
+    margin: 0px 0px;
+    font-size: 45px;
+    font-family: 'Rubik', sans-serif;
+    color: rgb(0, 132, 255);
+    text-shadow: 2px 2px 1px rgb(0, 0, 0);
+}
+
+.pizzaInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.pizzaInfo div h4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.desc {
+    font-size: 18px;
+}
+
+.price {
+    font-size: 35px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+}
+
+.button button {
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    background-color: rgb(68, 164, 255);
+    border: none;
+    border-radius: 15px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.button button:last-child {
+    background-color: rgb(255, 69, 69);
+}
+
+.button button:hover {
+    background-color: rgb(0, 132, 255);
+}
+
+.button button:last-child:hover {
+    background-color: rgb(255, 38, 38);
+}
+
+.modalIngre {
+    display: none;
+}
+
+.titleIngre span {
+    font-size: 16px;
+    color: red;
+    text-shadow: none;
+}
+
+.descIngre {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+}
+
+.desc label {
+    cursor: pointer;
+}
+
+.desc label input {
+    appearance: none;
+    border: 2px solid rgb(68, 164, 255);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.desc label input::before {
+    content: '';
+    width: 7px;
+    height: 10px;
+    position: absolute;
+    border: 3px solid rgb(0, 132, 255);
+    border-left: 0;
+    border-top: 0;
+    transform: rotate(45deg);
+    left: 3px;
+    opacity: 0;
+}
+
+.desc label input:checked::before {
+    opacity: 1;
+}
+
+.modalAdd {
+    display: none;
+}
+
+.titleAdd h1 {
+    font-size: 40px;
+}
+
+.pizzaInfoAdd {
+    gap: 5px;
+}
+
+.descAdd {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.descAdd label {
+    display: flex;
+}
+
+.span1 {
+    flex: 1;
+}
+
+.span2 {
+    flex: 1;
+}
+
+.priceAdd {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 280px) {
+    .logo {
+        font-size: 55px;
+    }
+
+    .titleModal h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 320px) {
+    .help span, .login span {
+        display: none;
+    }
+}
+
+@media (max-width: 770px) {
+
+    .modalBody {
+        width: 100%;
+        height: 100%;
+        border-radius:0;
+        box-shadow:none;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+    }
+
+    .pizzaBig {
+        padding: 30px 20px 0px 20px;
+    }
+
+    .pizzaBig img {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .pizzaBody {
+        padding-top: 0px;
+        margin-top: 20px;
+    }
+
+    .titleModal {
+        padding: 0px 20px;
+        margin-bottom: 10px;
+    }
+
+    .pizzaInfo {
+        gap: 5px;
+        padding: 0px 20px;
+    }
+
+    .button {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .button button {
+        width: 70%;
+    }
+
+    .gradientModalTop, .gradientModalBottom {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .gradientModalBottom {
+        position: relative;
+    }
+
+    .descAdd0 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .descAdd label {
+        display: flex;
+        min-width: 125px;
+    }
+
+    aside {
+        display: flex;
+        position: fixed;
+        left:100vw;
+        top:0;
+        bottom:0;
+        right:0;
+        background-image: url(../../Mídia/Imagens/pizzawall2.jpg);
+        overflow-y: auto;
+        transition: all ease 0.2s;
+        z-index: 100;
+    }
+
+    .asideShowModal {
+        left: 0;
+    }
+
+    .aside {
+        all: initial;
+        width: 100%;
+        padding: 50px 50px;
+        background-color: rgba(155, 207, 255, 0.95);
+    }
+
+    .titleCar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6%;
+        margin-bottom: 10px;
+    }
+
+    .menuCloser {
+        display: flex;
+        font-size: 30px;
+        margin-right: 20px;
+        flex: 1;
+        justify-content: end;
+    }
+
+    .titleCar h1 {
+        margin: 0px 0px 0px 20px;
+        flex: 1;
+    }
+
+    .carrinho {
+        gap: 6%;
+        justify-content: center;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .finish {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .login {
+        margin-right: 0px;
+    }
+
+    .menuOpener {
+        display: flex;
+    }
+}
