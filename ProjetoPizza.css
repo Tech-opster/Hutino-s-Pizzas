@@ -292,28 +292,14 @@ body {
 }
 
 aside {
-    min-width: 0px;
-    transition: all ease 0.2s;
-}
-
-.aside {
-    height: 100%;
-    width: 0px;
-    background-color: rgba(155, 207, 255, 0.95);
-    display: flex;
-    flex-direction: column;
+    width: 0vw;
     transition: all ease 0.2s;
     overflow-y: auto;
-    position: absolute;
-    right:0;
+    background-color: rgba(155, 207, 255, 0.95);
 }
 
-.asideShow {
-    min-width: 370px;
-}
-
-.asideShow2 {
-    width: 370px;
+.show {
+    width: 35vw;
 }
 
 .titleCar h1 {
@@ -322,6 +308,10 @@ aside {
     font-family: 'Rubik', sans-serif;
     color: rgb(0, 132, 255);
     text-shadow: 2px 2px 1px rgb(0, 0, 0);
+}
+
+.cartAppend {
+    width: 100%;
 }
 
 .menuCloser {
@@ -344,7 +334,6 @@ aside {
 }
 
 .pizzaCar {
-    flex: 1;
     font-size: 20px;
 }
 
@@ -364,6 +353,11 @@ aside {
     border-radius: 10px;
 }
 
+.qtMenos, .qtMais {
+    cursor: pointer;
+    font-weight: bold;
+}
+
 .ingreCar {
     margin-left: 20px;
 }
@@ -372,7 +366,7 @@ aside {
     font-size: 14px;
 }
 
-.aside hr {
+aside hr {
     border: 1px solid rgba(0, 132, 255, 0.6);
     width: 90%;
 }
@@ -710,8 +704,9 @@ aside {
     }
 
     aside {
-        display: flex;
+        all: initial;
         position: fixed;
+        padding: 50px 50px;
         left:100vw;
         top:0;
         bottom:0;
@@ -722,15 +717,18 @@ aside {
         z-index: 100;
     }
 
-    .asideShowModal {
-        left: 0;
+    .show {
+        width: auto;
     }
 
-    .aside {
-        all: initial;
-        width: 100%;
-        padding: 50px 50px;
+    .backGround {
+        position: absolute;
+        left:0;
+        top:0;
+        bottom:0;
+        right:0;
         background-color: rgba(155, 207, 255, 0.95);
+        z-index: -1;
     }
 
     .titleCar {
