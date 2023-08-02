@@ -374,7 +374,10 @@ aside hr {
 .fullPrice {
     display: flex;
     align-items: center;
-    margin: 0px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 30px;
 }
 
 .fullPrice h2 {
@@ -382,7 +385,7 @@ aside hr {
     font-family: 'Rubik', sans-serif;
     color: rgb(0, 132, 255);
     text-shadow: 2px 2px 1px rgb(0, 0, 0);
-    margin: 25px 20px;
+    margin: 0px;
 }
 
 .fullPrice span {
@@ -393,7 +396,7 @@ aside hr {
 .finish {
     display: flex;
     justify-content: center;
-    margin-top: 8px;
+    margin: 0px 25px;
 }
 
 .finish button {
@@ -706,7 +709,6 @@ aside hr {
     aside {
         all: initial;
         position: fixed;
-        padding: 50px 50px;
         left:100vw;
         top:0;
         bottom:0;
@@ -719,14 +721,15 @@ aside hr {
 
     .show {
         width: auto;
+        height: 100%;
     }
 
     .backGround {
-        position: absolute;
         left:0;
         top:0;
         bottom:0;
         right:0;
+        padding: 50px 50px;
         background-color: rgba(155, 207, 255, 0.95);
         z-index: -1;
     }

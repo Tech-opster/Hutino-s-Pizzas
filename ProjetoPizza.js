@@ -56,6 +56,28 @@ pizzaJson.map((item, index) => {
             descIngre.appendChild(label);
         };
 
+        const checkboxes = document.querySelectorAll('.descIngre input[type="checkbox"]');
+        const descAddCheck = document.querySelector('.descAdd');
+    
+        checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener('change', () => {
+                const pushIngredients = [];
+                checkboxes.forEach((checkbox) => {
+                if (checkbox.checked) {
+                    pushIngredients.push(checkbox.nextElementSibling.textContent);
+                }
+                });
+            
+                const ingredientsList = descAddCheck.querySelectorAll('label');
+                ingredientsList.forEach((ingredient) => {
+                const name = ingredient.querySelector('.span1').textContent;
+                if (pushIngredients.includes(name)) {
+                    ingredient.remove();
+                }
+                });
+            });
+            });
+
 //MODAL INGREDIENTES ADD
         const descAdd = document.querySelector('.descAdd');
         descAdd.innerHTML = '';
@@ -180,7 +202,6 @@ pizzaJson.map((item, index) => {
             priceCart
         });
     }
-    console.log(identifier)
 
     updateCart();
     closeModAdd();
