@@ -2,7 +2,7 @@ let pizzaJson = [
   {
     id: 1,
     name: "Mussarela",
-    img: "../../Mídia/Imagens/pizza.png",
+    img: "Mídia/pizza.png",
     price: 30.5,
     remAdd: [
       { name: "Mussarela", priceAdd: 2.00}, 
@@ -17,7 +17,7 @@ let pizzaJson = [
   {
     id: 2,
     name: "Calabresa",
-    img: "../../Mídia/Imagens/pizza2.png",
+    img: "Mídia/pizza2.png",
     price: 32.8,
     remAdd: [
       { name: "Calabresa defumada", priceAdd: 3.00},
@@ -34,7 +34,7 @@ let pizzaJson = [
   {
     id: 3,
     name: "Quatro Queijos",
-    img: "../../Mídia/Imagens/pizza3.png",
+    img: "Mídia/pizza3.png",
     price: 35.2,
     remAdd: [
       { name: "Molho de tomate", priceAdd: 3.00},
@@ -52,7 +52,7 @@ let pizzaJson = [
   {
     id: 4,
     name: "Portuguesa",
-    img: "../../Mídia/Imagens/pizza4.png",
+    img: "Mídia/pizza4.png",
     price: 38.0,
     remAdd: [
       { name: "Mussarela", priceAdd: 3.00},
@@ -74,7 +74,7 @@ let pizzaJson = [
   {
     id: 5,
     name: "Marguerita",
-    img: "../../Mídia/Imagens/pizza5.png",
+    img: "Mídia/pizza5.png",
     price: 35.5,
     remAdd: [
       { name: "Tomate", priceAdd: 3.00},
@@ -89,7 +89,7 @@ let pizzaJson = [
   {
     id: 6,
     name: "Frango com catupiry",
-    img: "../../Mídia/Imagens/pizza6.png",
+    img: "Mídia/pizza6.png",
     price: 34.0,
     remAdd: [
       { name: "Peito de frango", priceAdd: 3.00},
@@ -106,7 +106,7 @@ let pizzaJson = [
   {
     id: 7,
     name: "Brigadeiro",
-    img: "../../Mídia/Imagens/pizza7.png",
+    img: "Mídia/pizza7.png",
     price: 40.0,
     remAdd: [
       { name: "Chocolate meio amargo", priceAdd: 3.00},

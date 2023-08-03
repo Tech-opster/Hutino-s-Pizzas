@@ -6,7 +6,7 @@
 
 body {
     margin: 0px;
-    background-image: url(../../Mídia/Imagens/pizzawall2.jpg);
+    background-image: url(Mídia/pizzawall2.jpg);
     background-attachment: fixed;
     display: flex;
     justify-content: center;
@@ -713,7 +713,7 @@ aside hr {
         top:0;
         bottom:0;
         right:0;
-        background-image: url(../../Mídia/Imagens/pizzawall2.jpg);
+        background-image: url(Mídia/pizzawall2.jpg);
         overflow-y: auto;
         transition: all ease 0.2s;
         z-index: 100;
