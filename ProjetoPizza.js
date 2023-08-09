@@ -64,19 +64,20 @@ pizzaJson.map((item, index) => {
                 const pushIngredients = [];
                 checkboxes.forEach((checkbox) => {
                 if (checkbox.checked) {
-                    pushIngredients.push(checkbox.nextElementSibling.textContent);
-                }
+                        pushIngredients.push(checkbox.nextElementSibling.textContent);
+                    }
                 });
+                console.log(pushIngredients)
             
                 const ingredientsList = descAddCheck.querySelectorAll('label');
                 ingredientsList.forEach((ingredient) => {
                 const name = ingredient.querySelector('.span1').textContent;
                 if (pushIngredients.includes(name)) {
-                    ingredient.remove();
-                }
+                        ingredient.remove();
+                    }
                 });
             });
-            });
+        });
 
 //MODAL INGREDIENTES ADD
         const descAdd = document.querySelector('.descAdd');
@@ -178,12 +179,12 @@ pizzaJson.map((item, index) => {
     const deselectedIngredients = [];
 
     document.querySelectorAll('.descIngre input[type="checkbox"]:checked').forEach((checkbox) => {
-        const deselectedIngredientName = checkbox.nextElementSibling.textContent;
+        const deselectedIngredientName = `Remover: ${checkbox.nextElementSibling.textContent}`;
         deselectedIngredients.push(deselectedIngredientName);
     });
 
     document.querySelectorAll('.descAdd input[type="checkbox"]:checked').forEach((checkbox) => {
-        const ingredientName = checkbox.nextElementSibling.textContent;
+        const ingredientName = `Adicionar: ${checkbox.nextElementSibling.textContent}`;
         selectedIngredients.push(ingredientName);
     });
 
@@ -238,13 +239,13 @@ pizzaJson.map((item, index) => {
                 cartItem.querySelector('.qtTotal').innerHTML = cart[i].quantity;
                 
                 if (cart[i].desIngre.length !== 0) {
-                    cartItem.querySelector('.remItem').innerHTML = `Remover: ${cart[i].desIngre}`;
+                    cartItem.querySelector('.remItem').innerHTML = cart[i].desIngre;
                 } else {
                     cartItem.querySelector('.remItem').innerHTML = '';
                 }
 
                 if (cart[i].ingre.length !== 0) {
-                    cartItem.querySelector('.addItem').innerHTML = `Adicionar: ${cart[i].ingre}`;
+                    cartItem.querySelector('.addItem').innerHTML = cart[i].ingre;
                 } else {
                     cartItem.querySelector('.addItem').innerHTML = '';
                 }
