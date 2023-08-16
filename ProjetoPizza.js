@@ -67,7 +67,6 @@ pizzaJson.map((item, index) => {
                         pushIngredients.push(checkbox.nextElementSibling.textContent);
                     }
                 });
-                console.log(pushIngredients)
             
                 const ingredientsList = descAddCheck.querySelectorAll('label');
                 ingredientsList.forEach((ingredient) => {
