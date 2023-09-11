@@ -63,17 +63,20 @@ pizzaJson.map((item, index) => {
             checkbox.addEventListener('change', () => {
                 const pushIngredients = [];
                 checkboxes.forEach((checkbox) => {
-                if (checkbox.checked) {
-                        pushIngredients.push(checkbox.nextElementSibling.textContent);
+                    if (checkbox.checked) {
+                            pushIngredients.push(checkbox.nextElementSibling.textContent);
                     }
                 });
-            
+
+                console.log(pushIngredients);
+
                 const ingredientsList = descAddCheck.querySelectorAll('label');
+                
                 ingredientsList.forEach((ingredient) => {
-                const name = ingredient.querySelector('.span1').textContent;
-                if (pushIngredients.includes(name)) {
-                        ingredient.remove();
-                    }
+                    const name = ingredient.querySelector('.span1').textContent;
+                    if (pushIngredients.includes(name)) {
+                            ingredient.remove();
+                     }
                 });
             });
         });
@@ -112,11 +115,11 @@ pizzaJson.map((item, index) => {
             let totalPrice = pizzaJson[key].price;
         
             checkboxes.forEach((checkbox) => {
-            if (checkbox.checked) {
-                const price = parseFloat(checkbox.dataset.price);
-                priceCart = totalPrice += price;
+                if (checkbox.checked) {
+                    const price = parseFloat(checkbox.dataset.price);
+                    priceCart = totalPrice += price;
                 } else {
-                    priceCart = totalPrice;
+                        priceCart = totalPrice;
                 }
             });
         
