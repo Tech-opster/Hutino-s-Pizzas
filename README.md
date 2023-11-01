@@ -1,1 +1,1 @@
-Primeiro projeto de front-end usando JavaScript.
+Primeiro projeto front-end usando JavaScript.
